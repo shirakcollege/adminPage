@@ -41,8 +41,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ url('system-management/category') }}">Category</a></li>
-            <li><a href="{{ url('system-management/country') }}">Content</a></li>
-            <li><a href="{{ url('system-management/state') }}">Calendar</a></li>
+            <li><a href="{{ url('system-management/content') }}">Content</a></li>
           </ul>
         </li>
         <li><a href="{{ route('user-management.index') }}"><i class="fa fa-link"></i> <span>User management</span></a></li>
