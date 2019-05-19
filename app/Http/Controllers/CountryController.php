@@ -18,6 +18,10 @@ class CountryController extends Controller
         $this->middleware ('auth');
     }
 
+    public function index()
+    {
 
+        return view('system-mgmt/country/index');
+    }
 
 }

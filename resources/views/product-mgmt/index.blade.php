@@ -66,18 +66,6 @@
               </tr>
             @endforeach
             </tbody>
-            <tfoot>
-              <tr>
-                <tr role="row">
-                <th width="8%" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Picture: activate to sort column descending" aria-sort="ascending">Picture</th>
-                <th width="10%" class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" aria-sort="ascending">Product Name</th>
-                  <th width="19%" class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" >About</th>
-                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending">Price</th>
-                <th width="8%" class="sorting hidden-xs" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="category: activate to sort column ascending">Category</th>
-                  <th width="8%" tabindex="0" rowspan="1" colspan="1">Status</th>
-              </tr>
-              </tr>
-            </tfoot>
           </table>
         </div>
       </div>

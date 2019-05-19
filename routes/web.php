@@ -15,10 +15,14 @@ Route::get('/', function () {
     return view('dashboard');
 })->middleware('auth');
 
+
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
-// Route::get('/system-management/{option}', 'SystemMgmtController@index');
+
+//Route::get('system-management/{option}', 'SystemMgmtController@index');
+
 Route::get('/profile', 'ProfileController@index');
 
 
@@ -28,19 +32,13 @@ Route::resource('user-management', 'UserManagementController');
 Route::resource('employee-management', 'ProductManagementController');
 Route::post('employee-management/search', 'ProductManagementController@search')->name('employee-management.search');
 
-
+Route::resource('system-management/country', 'CountryController');
+//Route::post('system-management/country/search', 'CountryController')->name('country.search');
 
 Route::resource('system-management/category', 'CategoryController');
 Route::post('system-management/category/search', 'CategoryController@search')->name('category.search');
+//Route::post('employee-management', 'ProductManagementController@change');
 
 
-
-
-
-
-Route::get('system-management/report', 'ReportController@index');
-Route::post('system-management/report/search', 'ReportController@search')->name('report.search');
-Route::post('system-management/report/excel', 'ReportController@exportExcel')->name('report.excel');
-Route::post('system-management/report/pdf', 'ReportController@exportPDF')->name('report.pdf');
 
 Route::get('avatars/{name}', 'ProductManagementController@load');

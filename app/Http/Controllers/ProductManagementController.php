@@ -161,16 +161,25 @@ class ProductManagementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,$id)
+    public function destroy($id)
     {
 
-        $keys = ['Status'];
-        $input = $this->createQueryInput($keys, $request);
-         Employee::where('id', $id)->update($input);
-
+        Employee::where('id', $id)
+            ->update(['Status' => 'UnActive']);
          return redirect()->intended('/employee-management');
     }
 
+
+    /**
+     * @param $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function change($id)
+    {
+        (new \App\Employee)->where('id', $id)
+            ->update(['Status' => 'Active']);
+        return redirect()->intended('/employee-management');
+    }
 
     /**
      * Load image resource.
